@@ -1,0 +1,34 @@
+
+<div id="contentRight">
+  <div *ngIf="service">
+      <h2>Servcie: {{service.name}}</h2>
+  <div>
+    <div>
+        <ul class="tabs">
+        <li class="tab-link current" data-tab="tab-1">General</li>
+        <li class="tab-link" data-tab="tab-2">Endpoints</li>
+        <li class="tab-link" data-tab="tab-3">Sepcification</li>
+      </ul>
+
+    <div id="tab-1" class="tab-content active">
+      <div><label>id: </label>{{service.id}}</div>
+      <div>
+          <label>name: </label>
+          <input [(ngModel)]="service.name" placeholder = "name"/>
+      </div>
+    </div>
+    <div id="tab-2" class="tab-content">
+      test
+    </div>
+    <div id="tab-3" class="tab-content">
+      test
+    </div>
+    </div>
+  <div>
+      <button (click)="goBack()">Back</button>
+      <button (click)="commit()">Commit</button>
+  </div>
+
+
+</div>
+

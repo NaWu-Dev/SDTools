@@ -1,0 +1,15 @@
+<header>
+    <h1>{{title}}</h1>
+</header>
+
+<div id="contentWrapper">
+  <div id="contentLeft">
+    <ul id="leftNavigation">
+      <li> <a *ngFor="let version of versions" [routerLink]="['/dashboard']" [routerLinkActive]="['active']">
+        <i class="leftNavIcon"></i>{{ version }} </a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<router-outlet></router-outlet>

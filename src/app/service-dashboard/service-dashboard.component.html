@@ -1,0 +1,10 @@
+  <div id="contentRight">
+    <app-search></app-search>
+    <div class = "grid grid-pad">
+        <a *ngFor="let service of services" [routerLink]="['/detail', service.id]" class="col-1-4">
+        <div class ="module service">
+            <h4>{{service.name}}</h4>
+        </div>
+        </a>
+    </div>
+  </div>
